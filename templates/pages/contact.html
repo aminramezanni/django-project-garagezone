@@ -64,13 +64,15 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="contact-info-2">
+                        
+                        {% for setting in sitesettings %}
                         <div class="ci-box">
                             <div class="icon">
                                 <i class="flaticon-phone"></i>
                             </div>
                             <div class="detail">
-                                <h5>Phone:</h5>
-                                <p><a href="#">0477 8556 552</a></p>
+                                <h5>Phone: </h5>
+                                <p><a href=>{{setting.phone_number}}</a></p>
                             </div>
                         </div>
                         <div class="ci-box">
@@ -79,7 +81,7 @@
                             </div>
                             <div class="detail">
                                 <h5>Email:</h5>
-                                <p><a href="#">info@themevessel.com</a></p>
+                                <p><a href=>{{setting.email}}</a></p>
                             </div>
                         </div>
                         <div class="ci-box">
@@ -88,7 +90,7 @@
                             </div>
                             <div class="detail">
                                 <h5>Web:</h5>
-                                <p><a href="#">info@themevessel.com</a></p>
+                                <p><a href=>{{setting.site_url}}</a></p>
                             </div>
                         </div>
                         <div class="ci-box mb-0">
@@ -100,6 +102,8 @@
                                 <p><a href="#">+0477 85X6 552</a></p>
                             </div>
                         </div>
+                        {% endfor %}
+                            
                     </div>
                 </div>
             </div>

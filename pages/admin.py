@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Team,SiteSettings
+from .models import Team, SiteSettings
 # Register your models here.
 
 
 admin.site.register(Team)
+
 admin.site.register(SiteSettings)
