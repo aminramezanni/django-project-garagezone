@@ -31,3 +31,11 @@ def contact(request):
         'sitesettings' : sitesettings
     }
     return render(request, 'pages/contact.html',data)
+
+
+def header(request):
+    sitesettings = SiteSettings.objects.all()
+    data = {
+        'sitesettings' : sitesettings,
+    }
+    return render(request, 'includes/header.html',data)
