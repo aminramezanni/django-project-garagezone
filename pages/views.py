@@ -1,14 +1,17 @@
 from django.shortcuts import render
 from .models import Team , SiteSettings
-# Create your views here.
-
+from cars.models import Car
 
 def home(request):
     teams = Team.objects.all()
     sitesettings = SiteSettings.objects.all()
+    featured_car = Car.objects.order_by('-created_date').filter(is_featured=True)
+    all_car = Car.objects.order_by('-created_date')
     data = {
         'teams':teams,
-        'sitesettings' : sitesettings
+        'sitesettings' : sitesettings,
+        'featured_car' : featured_car,
+        'all_car' : all_car,
     }
     return render(request, 'pages/home.html',data)
 
