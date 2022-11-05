@@ -6,7 +6,7 @@ def home(request):
     teams = Team.objects.all()
     sitesettings = SiteSettings.objects.all()
     featured_car = Car.objects.order_by('-created_date').filter(is_featured=True)
-    all_car = Car.objects.order_by('-created_date')
+    all_car = Car.objects.order_by('-created_date')[:6]
     data = {
         'teams':teams,
         'sitesettings' : sitesettings,
