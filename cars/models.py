@@ -90,6 +90,7 @@ class Car(models.Model):
     )
 
     car_title = models.CharField(max_length=255)
+    brand = models.CharField(max_length=100)
     state = models.CharField(choices=state_choice,max_length=100)
     city = models.CharField(max_length=100)
     color = models.CharField(max_length=100)
