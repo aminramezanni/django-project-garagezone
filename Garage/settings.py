@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'pages',
     'cars',
     'accounts',
+    'contacts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
