@@ -1,11 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Team , SiteSettings
 from cars.models import Car
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.conf import settings
+
 
 def home(request):
     teams = Team.objects.all()
     sitesettings = SiteSettings.objects.all()
     featured_car = Car.objects.order_by('-created_date').filter(is_featured=True)
+    top_car = Car.objects.order_by('-price').filter(is_featured=True)[:3]  # this is for home-page header banner 
     all_car = Car.objects.order_by('-created_date')[:6]
     brand_search = Car.objects.values_list('brand',flat=True).distinct()
     model_search = Car.objects.values_list('model',flat=True).distinct()
@@ -23,6 +29,7 @@ def home(request):
         'city_search' : city_search,
         'year_search': year_search,
         'body_style_search' : body_style_search,
+        'top_car' : top_car,
     }
     return render(request, 'pages/home.html',data)
 
@@ -41,6 +48,23 @@ def services(request):
 
 def contact(request):
     sitesettings = SiteSettings.objects.all()
+    if request.method == 'POST':
+
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        phone = request.POST['phone']
+        message = request.POST['message']
+        
+        subject = 'welcome to Garagezone'
+        message = f'Hi {name}, thank you for contacting us we will get back to you soon.'
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = [email, ]
+        send_mail( subject, message, email_from, recipient_list )
+
+        messages.success(request, 'Thank you for contacting us. We will get back to you shortly')
+        return redirect('contact')
+
     data = {
         'sitesettings' : sitesettings
     }
