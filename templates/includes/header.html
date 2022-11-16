@@ -21,8 +21,15 @@
                             <a href="{% url 'dashboard' %}" class="sign-in"><i class="fa fa-tachometer"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="{% url 'logout' %}" class="sign-out"><i class="fa fa-sign-out"></i> Logout</a>
+                            <a href="{% url 'logout' %}" class="sign-in"><i class="fa fa-sign-in"></i> Logout</a>
                         </li>
+                        
+                        {% if user.is_superuser %}
+                            <li>
+                                <a href="admin/" class="sign-in"><i class="fa fa-sign-in"></i> Admin</a>
+                            </li>
+                        {% endif %}
+                            
                     {% else %}
                         <li>
                             <a href="{% url 'login' %}" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>

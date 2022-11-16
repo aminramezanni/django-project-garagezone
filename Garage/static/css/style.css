@@ -59,7 +59,7 @@ ul {
     color: #56d7fe !important;
 }
 
-.instagram:hover {
+.google:hover {
     color: #dc4e41 !important;
 }
 
@@ -79,6 +79,11 @@ ul {
 
 .twitter-bg {
     background: #33CCFF;
+    color: #fff;
+}
+
+.google-bg {
+    background: #db4437;
     color: #fff;
 }
 
@@ -117,6 +122,10 @@ ul {
     color: #fff;
 }
 
+.google-bg:hover {
+    background: #dc4e41;
+    color: #fff;
+}
 .instagram-bg:hover {
     background: #dc4e41;
     color: #fff;
@@ -918,10 +927,12 @@ input[type=checkbox]:checked + label:before {
     width: 0;
 }
 
-
+.banner-bg {
+    
+}
 
 .item-bg {
-
+    
     height: 100vh;
     /*animation: bgburnsEast 25s linear infinite alternate;
     -webkit-animation: bgburnsEast 25s linear infinite alternate;*/
@@ -3336,6 +3347,10 @@ input[type=checkbox]:checked + label:before {
     background: #56d7fe!important;
 }
 
+.team-1 .google-bg:hover {
+    background: #dc4e41!important;
+}
+
 .team-1 .instagram-bg:hover {
     background: #dc4e41!important;
 }
@@ -3438,6 +3453,10 @@ input[type=checkbox]:checked + label:before {
 
 .team-2 .twitter-bg:hover {
     background: #56d7fe!important;
+}
+
+.team-2 .google-bg:hover {
+    background: #dc4e41!important;
 }
 
 .team-2 .instagram-bg:hover {
@@ -3924,6 +3943,9 @@ footer {
     background: #56d7fe!important;
 }
 
+.footer .google-bg:hover {
+    background: #dc4e41!important;
+}
 .footer .instagram-bg:hover {
     background: #dc4e41!important;
 }
@@ -4656,7 +4678,7 @@ footer {
 
 /** Listings parallax start **/
 .listings-parallax {
-
+    
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -5776,12 +5798,12 @@ footer {
     color: #fff;
 }
 
-.contact-section .instagram-bg {
+.contact-section .google-bg {
     background: #db4437;
     color: #fff;
 }
 
-.contact-section .instagram-i {
+.contact-section .google-i {
     background: #c3291c;
 }
 
@@ -9167,7 +9189,7 @@ table {
         line-height: normal;
         margin-bottom: 15px;
     }
-
+    
     .alert {
         text-transform: uppercase;
         font-size: 12px;
@@ -9756,6 +9778,8 @@ input, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
     line-height: 49px;
     color: #f0151f;
 }
+
+
 a.nav-link.active{
   color: #f0151f !important;
 }
@@ -9763,3 +9787,12 @@ a.nav-link.active{
 .tabbing-box .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
   color: #fff !important;
 }
+
+
+
+
+
+
+
+
+
