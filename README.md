@@ -1,4 +1,4 @@
-# Garage Zone - Sell Cars Django Project
+# Garage Zone - Django Project
 
 Garage Zone is a web application built with Django, designed to facilitate the selling of cars. It provides a user-friendly interface with a search field, beautiful design, and integration for registering or logging in with Google and Facebook accounts. Additionally, the project customizes the admin page and includes essential features to ensure a comprehensive website.
 
@@ -36,10 +36,10 @@ To set up Garage Zone on your local machine, follow these steps:
 1. Ensure you have Python 3.x installed on your system.
 
 2. Clone this repository to your local machine using the following command:
-   git clone `https://github.com/aminramezanni/Django_project`
+   git clone `https://github.com/aminramezanni/django_garagezone`
 
 3. Navigate to the project directory:
-   ```cd Django_project```
+   ```cd django_garagezone```
 
 4. Create and activate a virtual environment:
    ```python -m venv venv```
