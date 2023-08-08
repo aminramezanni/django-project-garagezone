@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Team, SiteSettings
 from django.utils.html import format_html
-# Register your models here.
+
 
 
 class TeamAdmin(admin.ModelAdmin):
