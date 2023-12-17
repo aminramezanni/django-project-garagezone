@@ -1,4 +1,4 @@
-# Garage Zone - Django Project
+# Django Project / Garagezone
 
 Garage Zone is a web application built with Django, designed to facilitate the selling of cars. It provides a user-friendly interface with a search field, beautiful design, and integration for registering or logging in with Google and Facebook accounts. Additionally, the project customizes the admin page and includes essential features to ensure a comprehensive website.
 
