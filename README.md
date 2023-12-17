@@ -36,10 +36,10 @@ To set up Garage Zone on your local machine, follow these steps:
 1. Ensure you have Python 3.x installed on your system.
 
 2. Clone this repository to your local machine using the following command:
-   git clone `https://github.com/aminramezanni/django_garagezone`
+   git clone `https://github.com/aminramezanni/django-project-garagezone`
 
 3. Navigate to the project directory:
-   ```cd django_garagezone```
+   ```cd django-project-garagezone```
 
 4. Create and activate a virtual environment:
    ```python -m venv venv```
